@@ -3,7 +3,8 @@ Automating cross-region failures in Google Cloud SQL with HA and Cascading Repli
 
 This project covers the automation of conducting a cross region failover in Google Cloud SQL. 
 
-Assumptions
+<h3>Assumptions</h3>
+
 Before running this playbook, please confirm you have the following architecture components in place:
 - You are using a High Availability Cloud SQL instance as your Primary Instance.
 - You have at least one Read Replica in a different GCP Region than your Primary Instance, and that <a href="https://cloud.google.com/sql/docs/mysql/high-availability#read_replicas">Read Replica is configured for High Availability</a>. Without having a read replica in a different GCP region provisioned prior to an incident, the failover process as automated in this playbook is not possible.
