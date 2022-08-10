@@ -10,7 +10,7 @@ Before running this playbook, please confirm you have the following architecture
 - If you have additional Read Replicas serving read-only applications, those replicas are using Cascading Replication so they are not dependent on the Primary Instance for Replication.
 
 Example Architecture
-<insert diagram>
+(Screen Shot 2022-08-10 at 2.11.12 PM.png)
 
 What does the script do?
 - This script automates the process of failing a Cloud SQL instance over to a different GCP Region during a regional outage event. To accomplish this, the script automates the following based on user input:
