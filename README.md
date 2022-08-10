@@ -15,12 +15,12 @@ Before running this playbook, please confirm you have the following architecture
 
 <h3>What does this script do?</h3>
 This script automates the process of failing a Cloud SQL instance over to a different GCP Region during a regional outage event. To accomplish this, the script automates the following based on user input:
- 1. Selecting the right GCP project that the instance resides in (user input)
- 2. Capturing the Instance ID of the Primary Instance in the region that is down (user input)
- 3. Capturing the Instance ID of the DR Read Replica that you want to fail over to (user input)
- 4. Facilitating the failover by promoting the DR Instance in the new region to the primary writable cloud sql instance
- 5. Providing connection details for the newly promoted Instance
- 6. Replacing the original Primary Instance with an HA Read Replica in the same zone for future failback procedures
+ -1. Selecting the right GCP project that the instance resides in (user input)
+ -2. Capturing the Instance ID of the Primary Instance in the region that is down (user input)
+ -3. Capturing the Instance ID of the DR Read Replica that you want to fail over to (user input)
+ -4. Facilitating the failover by promoting the DR Instance in the new region to the primary writable cloud sql instance
+ -5. Providing connection details for the newly promoted Instance
+ -6. Replacing the original Primary Instance with an HA Read Replica in the same zone for future failback procedures
   
 <h3>Failing back to your Primary Region</h3>
   - You can use the automated_post-DR_sql_failback script to conduct a controlled failover back to the orginal Region and Zone you used prior to the regional outage. This script will complete a very similar process to the one specified above, but it will leverage the HA Read Replica created in step #6 as the failover target, and will entail fully replacing any and all replicas.
